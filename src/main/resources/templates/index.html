@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Secure Web System</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Secure Web Management System</h2>
+
+    <div class="top-links">
+        <a th:href="@{/add-client}" class="btn btn-primary">
+            Add Client
+        </a>
+
+
+        <a class="btn" th:href="@{/clients}">📋 View Clients</a>
+
+    </div>
+</div>
+
+</body>
+</html>

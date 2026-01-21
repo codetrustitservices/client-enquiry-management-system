@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Client</title>
+
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Add New Client</h2>
+
+    <form th:action="${enquiry.id == 0} ? @{/submit-enquiry} : @{/update-enquiry}"
+          th:object="${enquiry}"
+          method="post">
+
+
+        <input type="hidden" th:field="*{id}">
+
+    <input type="text" th:field="*{name}" class="form-control mb-3" placeholder="Your Name" required>
+
+
+
+        <input type="email" th:field="*{email}" class="form-control mb-3" placeholder="Email" required>
+
+        <input type="text" th:field="*{phone}" class="form-control mb-3" placeholder="Phone Number" required>
+
+        <input th:field="*{message}" class="form-control mb-3" placeholder="Your Message" required></input>
+
+        <button type="submit" class="btn btn-primary w-100">Submit Enquiry</button>
+    </form>
+
+    <br>
+    <a class="action-link" href="/">⬅ Back</a>
+</div>
+
+</body>
+</html>
